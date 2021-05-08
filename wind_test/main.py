@@ -7,11 +7,11 @@ Created on Tue May  4 16:58:16 2021
 
 import datetime
 import pandas as pd
-import Revenue.revenue as rev
+import revenue.revenue as rev
 import operationcost.costcalc as opex
 import  financial.balancesheet as fin
 
-#----------------------Revenue Input------------------------------------
+#----------------------revenue Input------------------------------------
 InstalledCapacity = 50
 Turbines = 6
 CapacityFactor = 0.36
@@ -46,6 +46,7 @@ Costdf = CostObject.OpexCal()
 
 #--------------------------Tax Input--------------------------------
 unlcashflow = pd.merge(Revdf, Costdf , left_on="dates", right_on="dates")
+print(unlcashflow)
 
 
 
