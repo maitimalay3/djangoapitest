@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "ba6bcca5-81cf-43b5-8c16-b2324f515676",
+		"name": "Wind APP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Wind test",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"InstalledCapacity\": 50,\n    \"Turbines\" : 6,\n    \"CapacityFactor\": 0.36,\n    \"Curtailment\": 0.05,\n    \"PriceInflation\": 0.02,\n    \"start_year\": 2021,\n    \"years_of_operation\": 50,\n    \"receivable_period\": 30,\n    \"ppaprice\": 45,\n    \"setupcost\": 700000,\n    \"baseoperationcost\": 255000,\n    \"CapexCost\": 200000000,\n    \"DpsYear\": 50,\n    \"payble_period\": 30,\n    \"tax_rate\": 0.23,\n    \"sync\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/wind_test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"wind_test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Result",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"InstalledCapacity\": 50,\n    \"Turbines\" : 6,\n    \"CapacityFactor\": 0.36,\n    \"Curtailment\": 0.05,\n    \"PriceInflation\": 0.02,\n    \"start_year\": 2021,\n    \"years_of_operation\": 50,\n    \"receivable_period\": 30,\n    \"ppaprice\": 45,\n    \"setupcost\": 700000,\n    \"baseoperationcost\": 255000,\n    \"CapexCost\": 200000000,\n    \"DpsYear\": 50,\n    \"payble_period\": 30,\n    \"tax_rate\": 0.23,\n    \"sync\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/get_result/14",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"get_result",
+						"14"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
