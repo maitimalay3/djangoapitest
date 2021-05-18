@@ -27,6 +27,10 @@ services:
       python manage.py collectstatic --noinput &&
       python manage.py runserver 0.0.0.0:8000"
     volumes:
+      - ./wind_app:/app_code/wind_app
+      - ./api:/app_code/api
+      - ./wind_test:/app_code/wind_test
+      - ./templates:/app_code/templates
       - static_volume:/app_code/staticfiles
       - media_volume:/app_code/media
     ports:

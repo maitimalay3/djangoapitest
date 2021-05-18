@@ -55,6 +55,7 @@ INSTALLED_APPS = [
 
     # project's apps
     'api',
+    'drf_yasg',
 ]
 
 SITE_ID = 1
@@ -113,10 +114,6 @@ DATABASES = {
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
-
-    {
-        'NAME': 'users.password_validation.MinimumLengthAndNumericPasswordValidator',
-    },
 ]
 
 # Internationalization
